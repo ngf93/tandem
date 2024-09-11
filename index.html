@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Тандем</title>
+</head>
+<body>
+    <header>
+        <div class="container px-xxl-5 py-2 py-sm-3 py-md-4">
+            <div class="row align-items-center">
+                <div class="col-6 col-sm-4 col-lg-3">
+                    <a href="index.html">
+                        <img src="imgs/logo.svg" alt="logo" class="logo">
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-4 col-xxl-6">
+                    <address class="d-flex align-items-center mb-2">
+                        <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6666 8.33334C16.6666 13.3333 9.99992 18.3333 9.99992 18.3333C9.99992 18.3333 3.33325 13.3333 3.33325 8.33334C3.33325 6.56523 4.03563 4.86954 5.28587 3.61929C6.53612 2.36905 8.23181 1.66667 9.99992 1.66667C11.768 1.66667 13.4637 2.36905 14.714 3.61929C15.9642 4.86954 16.6666 6.56523 16.6666 8.33334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 10.8333C11.3807 10.8333 12.5 9.71404 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71404 8.61929 10.8333 10 10.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                    
+                        <span class="ms-2 flex-1">пр. Космонавтов, д.123 кв.6В, офис 422</span>
+                    </address>
+                    <div class="d-flex align-items-center">
+                        <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6023 1.66667 9.99996 1.66667C5.39759 1.66667 1.66663 5.39763 1.66663 10C1.66663 14.6024 5.39759 18.3333 9.99996 18.3333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 5V10L12.0833 6.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                    
+                        <span class="ms-2 flex-1">Ежедневно с 09:00 до 20:00</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-8 col-lg-5 col-xxl-3 d-flex justify-content-end align-items-center">
+                    <div class="d-none d-sm-block">
+                        <a class="d-flex justify-content-end align-items-center mb-2" href="tel:79121433311">
+                            <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2745C18.1008 17.4871 17.9644 17.678 17.7934 17.8349C17.6224 17.9918 17.4205 18.1112 17.2006 18.1856C16.9808 18.2599 16.7478 18.2876 16.5167 18.2667C13.9523 17.988 11.4892 17.1118 9.32498 15.7083C7.31151 14.4289 5.60443 12.7218 4.32499 10.7083C2.91663 8.53433 2.04019 6.05916 1.76665 3.48333C1.74583 3.25288 1.77321 3.02063 1.84707 2.80135C1.92092 2.58207 2.03963 2.38057 2.19562 2.20968C2.35162 2.03879 2.54149 1.90225 2.75314 1.80876C2.9648 1.71527 3.1936 1.66688 3.42499 1.66666H5.92499C6.32941 1.66268 6.72148 1.80589 7.02812 2.0696C7.33476 2.33332 7.53505 2.69953 7.59165 3.09999C7.69717 3.90005 7.89286 4.6856 8.17499 5.44166C8.2871 5.73993 8.31137 6.06409 8.24491 6.37573C8.17844 6.68737 8.02404 6.97342 7.79998 7.19999L6.74165 8.25833C7.92795 10.3446 9.65536 12.072 11.7417 13.2583L12.8 12.2C13.0266 11.9759 13.3126 11.8215 13.6243 11.7551C13.9359 11.6886 14.26 11.7129 14.5583 11.825C15.3144 12.1071 16.0999 12.3028 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6913 18.3333 14.1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.7084 1.66667C13.4069 1.84565 14.9935 2.599 16.2058 3.80216C17.418 5.00531 18.1833 6.58618 18.375 8.28334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.7084 5C12.528 5.16161 13.2801 5.56586 13.867 6.16026C14.454 6.75466 14.8487 7.51177 15 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                            <span class="fs-17 fw-7 ms-2">+7 (912) 143-33-11</span>
+                        </a>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#callbackModal" class="color-main fw-7 ms-auto text-uppercase">Заказать звонок</button>
+                    </div>
+                    <a href="tel:79121433311" class="btn-call ms-auto d-sm-none">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2745C18.1008 17.4871 17.9644 17.678 17.7934 17.8349C17.6224 17.9918 17.4205 18.1112 17.2006 18.1856C16.9808 18.2599 16.7478 18.2876 16.5167 18.2667C13.9523 17.988 11.4892 17.1118 9.32498 15.7083C7.31151 14.4289 5.60443 12.7218 4.32499 10.7083C2.91663 8.53433 2.04019 6.05916 1.76665 3.48333C1.74583 3.25288 1.77321 3.02063 1.84707 2.80135C1.92092 2.58207 2.03963 2.38057 2.19562 2.20968C2.35162 2.03879 2.54149 1.90225 2.75314 1.80876C2.9648 1.71527 3.1936 1.66688 3.42499 1.66666H5.92499C6.32941 1.66268 6.72148 1.80589 7.02812 2.0696C7.33476 2.33332 7.53505 2.69953 7.59165 3.09999C7.69717 3.90005 7.89286 4.6856 8.17499 5.44166C8.2871 5.73993 8.31137 6.06409 8.24491 6.37573C8.17844 6.68737 8.02404 6.97342 7.79998 7.19999L6.74165 8.25833C7.92795 10.3446 9.65536 12.072 11.7417 13.2583L12.8 12.2C13.0266 11.9759 13.3126 11.8215 13.6243 11.7551C13.9359 11.6886 14.26 11.7129 14.5583 11.825C15.3144 12.1071 16.0999 12.3028 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6913 18.3333 14.1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.7084 1.66667C13.4069 1.84565 14.9935 2.599 16.2058 3.80216C17.418 5.00531 18.1833 6.58618 18.375 8.28334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.7084 5C12.528 5.16161 13.2801 5.56586 13.867 6.16026C14.454 6.75466 14.8487 7.51177 15 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" class="ms-3 ms-sm-4 ms-md-5 d-lg-none btn-primary p-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="5" width="24" height="2" fill="white"/>
+                            <rect y="11" width="24" height="2" fill="white"/>
+                            <rect y="17" width="24" height="2" fill="white"/>
+                        </svg>                                                   
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="d-none d-lg-block">
+            <ul class="container">
+                <li>
+                    <a href="about.html">О компании</a>
+                </li>
+                <li class="hover">
+                    <a href="" class="hover-link">
+                        <span>Услуги</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 13.172L16.95 8.222L18.364 9.636L12 16L5.63601 9.636L7.05001 8.222L12 13.172Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <ul class="hover-menu">
+                        <li><a href="#">Услуга 1</a></li>
+                        <li><a href="#">Услуга 2</a></li>
+                        <li><a href="#">Услуга 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Цены</a>
+                </li>
+                <li>
+                    <a href="payment.html">оПЛАТА</a>
+                </li>
+                <li>
+                    <a href="faq.html">Вопрос-ответ</a>
+                </li>
+                <li>
+                    <a href="">Полезные статьи</a>
+                </li>
+                <li>
+                    <a href="contacts.html">кОНТАКТЫ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-4 pt-md-5">
+        <section>
+            <div class="container px-xxl-5 mb-4">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-lg-8 col-xl-7">
+                        <h1>Инновации и решения для реконструкции сооружений и строительства объектов</h1>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p class="fs-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-xxl-0 position-relative">
+                <div class="swiper swiper-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="imgs/slide.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/slide.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/slide.jpg" alt="slide">
+                        </div>
+                    </div>
+                    <div class="swiper-controls">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                            </svg>                            
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                            </svg>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container px-xxl-5">
+            <div class="mb-4 mb-lg-5 row justify-content-between align-items-start">
+                <div class="col-12 col-lg-8 col-xl-6">
+                    <h2>вСЕ ДЛЯ ВАШЕГО СТРОИТЕЛЬСТВА, ШИРОКИЙ ВЫБОР УСЛУГ И МАТЕРИАЛОВ</h2>
+                </div>
+                <div class="col-12 col-lg-4 col-xl-6">
+                    <a href="" class="link-more ms-lg-auto">
+                        <span class="me-2">пЕРЕЙТИ К УСЛУГАМ</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46967 16.5303C7.17678 16.2374 7.17678 15.7626 7.46967 15.4697L15.9697 6.96967C16.2626 6.67678 16.7374 6.67678 17.0303 6.96967C17.3232 7.26256 17.3232 7.73744 17.0303 8.03033L8.53033 16.5303C8.23744 16.8232 7.76256 16.8232 7.46967 16.5303Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 17.25C16.0858 17.25 15.75 16.9142 15.75 16.5L15.75 8.25L7.5 8.25C7.08579 8.25 6.75 7.91421 6.75 7.5C6.75 7.08579 7.08579 6.75 7.5 6.75L16.5 6.75C16.9142 6.75 17.25 7.08579 17.25 7.5L17.25 16.5C17.25 16.9142 16.9142 17.25 16.5 17.25Z" fill="currentColor"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row-cols-md-2 g-3 g-md-4 mb-4">
+                <div>
+                    <div class="product-card">
+                        <img src="imgs/img1.jpg" alt="рЕКОНСТРУКЦИЯ">
+                        
+                        <div class="product-card-text">
+                            <h3><a href="">рЕКОНСТРУКЦИЯ</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                            <button type="button" class="btn-secondary mt-auto">пОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product-card">
+                        <img src="imgs/img2.jpg" alt="сТОИТЕЛЬСТВО">
+                        
+                        <div class="product-card-text">
+                            <h3><a href="">сТОИТЕЛЬСТВО</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                            <button type="button" class="btn-secondary mt-auto">пОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product-card">
+                        <img src="imgs/img3.jpg" alt="зАГОРОДНОЕ СТРОИТЕЛЬСТВО">
+                        
+                        <div class="product-card-text">
+                            <h3><a href="">зАГОРОДНОЕ СТРОИТЕЛЬСТВО</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                            <button type="button" class="btn-secondary mt-auto">пОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product-card">
+                        <img src="imgs/img4.jpg" alt="лАНДШАФТ">
+                        
+                        <div class="product-card-text">
+                            <h3><a href="">лАНДШАФТ</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                            <button type="button" class="btn-secondary mt-auto">пОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-callback">
+                <div class="row flex-lg-row-reverse gx-lg-0 justify-content-end align-items-center">
+                    <div class="col-12 col-lg-7 col-xl-6">
+                        <h2 class="text-center text-lg-start">нУЖНА КОНСУЛЬТАЦИЯ СВЯЖИТЕСЬ С НАМИ</h2>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                            </div>
+                        </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#callbackModal" class="btn-secondary mx-auto mx-lg-0 mt-4 mt-lg-5">оСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                    <div class="col-12 col-lg-5 col-xl-6">
+                        <img src="imgs/woman.png" alt="КОНСУЛЬТАЦИЯ" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container px-xxl-5">
+            <div class="mb-4 mb-lg-5 row justify-content-between align-items-start">
+                <div class="col-12 col-lg-8 col-xl-6">
+                    <h2>оцените качество и стиль наших проектов</h2>
+                    <ul class="nav nav-tabs mb-4 mb-lg-0" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#reconstruction" type="button" role="tab" aria-selected="true">Реконструкция</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#construction" type="button" role="tab" aria-selected="false">Строительство</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#suburban" type="button" role="tab" aria-selected="false">загородное строительство</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#landscape" type="button" role="tab" aria-selected="false">Ландшафт</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4 col-xl-6">
+                    <a href="" class="link-more ms-lg-auto">
+                        <span class="me-2">Перейти ко всем работам</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46967 16.5303C7.17678 16.2374 7.17678 15.7626 7.46967 15.4697L15.9697 6.96967C16.2626 6.67678 16.7374 6.67678 17.0303 6.96967C17.3232 7.26256 17.3232 7.73744 17.0303 8.03033L8.53033 16.5303C8.23744 16.8232 7.76256 16.8232 7.46967 16.5303Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 17.25C16.0858 17.25 15.75 16.9142 15.75 16.5L15.75 8.25L7.5 8.25C7.08579 8.25 6.75 7.91421 6.75 7.5C6.75 7.08579 7.08579 6.75 7.5 6.75L16.5 6.75C16.9142 6.75 17.25 7.08579 17.25 7.5L17.25 16.5C17.25 16.9142 16.9142 17.25 16.5 17.25Z" fill="currentColor"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="reconstruction" role="tabpanel" tabindex="0">
+                    <div class="swiper swiper-portfolio">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Усадьба Брянчаниновых</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Усадьба 2</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Усадьба 3</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="construction" role="tabpanel" tabindex="0">
+                    <div class="swiper swiper-portfolio">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Строительство 1</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Строительство 2</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Строительство 3</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="suburban" role="tabpanel" tabindex="0">
+                    <div class="swiper swiper-portfolio">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Загородное строительство 1</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Загородное строительство 2</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Загородное строительство 3</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="landscape" role="tabpanel" tabindex="0">
+                    <div class="swiper swiper-portfolio">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Ландшафт 1</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Ландшафт 2</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ba-group">
+                                    <img src="imgs/before.jpg" alt="before">
+                                    <img src="imgs/after.jpg" alt="after">
+                                </div>
+                                <div class="row gx-0">
+                                    <div class="col-12 col-md-9 col-lg-6">
+                                        <h3>Ландшафт 3</h3>
+                                        <p class="fs-115">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet,</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container px-xxl-5">
+            <div class="mb-4 mb-lg-0 row justify-content-between align-items-start">
+                <div class="col-12 col-lg-8 col-xl-6">
+                    <h2>Отзывы наших заказчиков</h2>
+                </div>
+                <div class="col-12 col-lg-4 col-xl-6">
+                    <a href="" class="link-more ms-lg-auto">
+                        <span class="me-2">Перейти ко всем Отзывам</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46967 16.5303C7.17678 16.2374 7.17678 15.7626 7.46967 15.4697L15.9697 6.96967C16.2626 6.67678 16.7374 6.67678 17.0303 6.96967C17.3232 7.26256 17.3232 7.73744 17.0303 8.03033L8.53033 16.5303C8.23744 16.8232 7.76256 16.8232 7.46967 16.5303Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 17.25C16.0858 17.25 15.75 16.9142 15.75 16.5L15.75 8.25L7.5 8.25C7.08579 8.25 6.75 7.91421 6.75 7.5C6.75 7.08579 7.08579 6.75 7.5 6.75L16.5 6.75C16.9142 6.75 17.25 7.08579 17.25 7.5L17.25 16.5C17.25 16.9142 16.9142 17.25 16.5 17.25Z" fill="currentColor"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
+
+            <div class="position-relative">
+                <div class="swiper swiper-3elems">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a class="" data-fslightbox="gallery" href="imgs/review.jpg">
+                                <figure class="imgCap">
+                                    <img src="imgs/review.jpg" alt="review">
+                                    <figcaption>
+                                        <h3>Филиал пао «МТС»</h3>
+                                        <p>22.04.2023</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="" data-fslightbox="gallery" href="imgs/review.jpg">
+                                <figure class="imgCap">
+                                    <img src="imgs/review.jpg" alt="review">
+                                    <figcaption>
+                                        <h3>Филиал пао «МТС»</h3>
+                                        <p>22.04.2023</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="" data-fslightbox="gallery" href="imgs/review.jpg">
+                                <figure class="imgCap">
+                                    <img src="imgs/review.jpg" alt="review">
+                                    <figcaption>
+                                        <h3>Филиал пао «МТС»</h3>
+                                        <p>22.04.2023</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="" data-fslightbox="gallery" href="imgs/review.jpg">
+                                <figure class="imgCap">
+                                    <img src="imgs/review.jpg" alt="review">
+                                    <figcaption>
+                                        <h3>Филиал пао «МТС»</h3>
+                                        <p>22.04.2023</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="" data-fslightbox="gallery" href="imgs/review.jpg">
+                                <figure class="imgCap">
+                                    <img src="imgs/review.jpg" alt="review">
+                                    <figcaption>
+                                        <h3>Филиал пао «МТС»</h3>
+                                        <p>22.04.2023</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-controls mt-4 justify-content-center">
+                        <div class="swiper-button-prev">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4374 16L21.0374 22.6L19.152 24.4854L10.6667 16L19.152 7.51468L21.0374 9.40002L14.4374 16Z" fill="currentColor"/>
+                            </svg>                            
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5626 16L10.9626 9.39998L12.848 7.51465L21.3333 16L12.848 24.4853L10.9626 22.6L17.5626 16Z" fill="currentColor"/>
+                            </svg>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container px-xxl-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="imgs/logo-white.svg" alt="Парадис нерудные материалы">
+                    <ul class="social list-unstyled mt-4">
+                        <li class="me-4">
+                            <a href="">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32.7216 13.7784C32.907 13.1603 32.7216 12.7061 31.8393 12.7061H28.9219C28.1801 12.7061 27.8384 13.0984 27.6529 13.5312C27.6529 13.5312 26.1692 17.1473 24.0675 19.4962C23.3875 20.1761 23.0785 20.3922 22.7076 20.3922C22.5221 20.3922 22.2537 20.1761 22.2537 19.5581V13.7784C22.2537 13.0365 22.0385 12.7061 21.4202 12.7061H16.8358C16.3723 12.7061 16.0935 13.0503 16.0935 13.3766C16.0935 14.0799 17.1442 14.242 17.2526 16.22V20.5162C17.2526 21.4581 17.0825 21.629 16.7116 21.629C15.7226 21.629 13.3171 17.9965 11.8901 13.8403C11.6104 13.0324 11.3299 12.7061 10.5843 12.7061H7.66698C6.83345 12.7061 6.66675 13.0984 6.66675 13.5312C6.66675 14.3039 7.65594 18.1365 11.272 23.2052C13.683 26.6664 17.0792 28.5431 20.1699 28.5431C22.0245 28.5431 22.2537 28.1263 22.2537 27.4084V24.7922C22.2537 23.9587 22.4294 23.7924 23.0164 23.7924C23.4494 23.7924 24.191 24.0087 25.9221 25.6776C27.9 27.6554 28.2259 28.5431 29.3387 28.5431H32.2561C33.0896 28.5431 33.5063 28.1263 33.2659 27.3038C33.0029 26.4841 32.0585 25.295 30.8053 23.8851C30.1253 23.0814 29.1053 22.216 28.7965 21.7834C28.3637 21.227 28.4873 20.9799 28.7965 20.4856C28.7965 20.4856 32.3507 15.4786 32.7216 13.7786V13.7784Z" fill="currentColor"/>
+                                </svg>                                    
+                            </a>
+                        </li>
+                        <li class="me-4">
+                            <a href="">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.9997 10.7005C21.5711 10.7005 22.8492 11.9786 22.8492 13.55C22.8492 15.12 21.5707 16.3982 19.9997 16.3982C18.4293 16.3982 17.1509 15.12 17.1509 13.55C17.1505 11.9783 18.4297 10.7005 19.9997 10.7005ZM19.9997 20.4297C23.7953 20.4297 26.882 17.344 26.882 13.55C26.882 9.75403 23.7957 6.66699 19.9997 6.66699C16.2044 6.66699 13.1174 9.75436 13.1174 13.55C13.1174 17.344 16.2044 20.4297 19.9997 20.4297ZM22.784 26.0434C24.1998 25.721 25.5509 25.1615 26.7803 24.3887C27.2328 24.104 27.5537 23.6511 27.6724 23.1298C27.7911 22.6084 27.6978 22.0613 27.4131 21.6087C27.2723 21.3844 27.0886 21.19 26.8726 21.0367C26.6566 20.8835 26.4125 20.7743 26.1543 20.7154C25.8961 20.6565 25.6288 20.6492 25.3677 20.6937C25.1066 20.7382 24.8569 20.8338 24.6327 20.9749C21.8132 22.7475 18.1843 22.7462 15.367 20.9749C15.1429 20.8337 14.8932 20.7381 14.6321 20.6936C14.3711 20.6491 14.1038 20.6564 13.8456 20.7153C13.5874 20.7742 13.3433 20.8834 13.1273 21.0367C12.9114 21.19 12.7278 21.3843 12.587 21.6087C12.3022 22.0611 12.2088 22.6082 12.3272 23.1295C12.4457 23.6509 12.7664 24.1038 13.2188 24.3887C14.4481 25.1612 15.7989 25.7207 17.2144 26.0434L13.3671 29.8914C12.989 30.2696 12.7766 30.7825 12.7767 31.3173C12.7768 31.8521 12.9894 32.365 13.3676 32.7431C13.7458 33.1211 14.2587 33.3335 14.7935 33.3334C15.3283 33.3333 15.8412 33.1208 16.2192 32.7426L19.9991 28.9621L23.7812 32.7429C23.9682 32.9302 24.1903 33.0787 24.4347 33.1801C24.6792 33.2815 24.9413 33.3337 25.2059 33.3337C25.4706 33.3337 25.7327 33.2815 25.9771 33.1801C26.2216 33.0787 26.4437 32.9302 26.6307 32.7429C26.8183 32.5559 26.9671 32.3338 27.0686 32.0891C27.1701 31.8445 27.2224 31.5823 27.2224 31.3175C27.2224 31.0526 27.1701 30.7904 27.0686 30.5458C26.9671 30.3012 26.8183 30.079 26.6307 29.8921L22.784 26.0434Z" fill="currentColor"/>
+                                </svg>                                    
+                            </a>
+                        </li>
+                        <li class="me-4">
+                            <a href="">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.3334 12.4359C32.381 12.8205 31.2926 13.0769 30.2042 13.2051C31.2926 12.5641 32.245 11.5385 32.6531 10.3846C31.5647 11.0256 30.4763 11.4103 29.1157 11.6667C28.1634 10.641 26.6667 10 25.1701 10C22.1769 10 19.728 12.3077 19.728 15.1282C19.728 15.5128 19.728 15.8974 19.864 16.282C15.3742 16.0256 11.2926 13.9744 8.5715 10.8974C8.16334 11.6667 7.89123 12.5641 7.89123 13.4615C7.89123 15.2564 8.84362 16.7949 10.3402 17.6923C9.38783 17.6923 8.5715 17.4359 7.89123 17.0513C7.89123 19.4872 9.79599 21.6667 12.245 22.0513C11.8368 22.1795 11.2926 22.1795 10.7484 22.1795C10.3402 22.1795 10.0681 22.1795 9.65994 22.0513C10.3402 24.1026 12.381 25.641 14.83 25.641C12.9253 27.0513 10.6123 27.8205 8.02729 27.8205C7.61913 27.8205 7.21097 27.8205 6.66675 27.6923C9.11573 29.1026 11.9729 30 15.1021 30C25.1702 30 30.6123 22.1795 30.6123 15.3846V14.7436C31.7008 14.359 32.6531 13.4615 33.3334 12.4359Z" fill="currentColor"/>
+                                </svg>                                    
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled mt-5">
+                        <li class="mb-4">
+                            <address class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.6666 8.33366C16.6666 13.3337 9.99992 18.3337 9.99992 18.3337C9.99992 18.3337 3.33325 13.3337 3.33325 8.33366C3.33325 6.56555 4.03563 4.86986 5.28587 3.61961C6.53612 2.36937 8.23181 1.66699 9.99992 1.66699C11.768 1.66699 13.4637 2.36937 14.714 3.61961C15.9642 4.86986 16.6666 6.56555 16.6666 8.33366Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 10.833C11.3807 10.833 12.5 9.71372 12.5 8.33301C12.5 6.9523 11.3807 5.83301 10 5.83301C8.61929 5.83301 7.5 6.9523 7.5 8.33301C7.5 9.71372 8.61929 10.833 10 10.833Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                                <span class="ms-2 flex-1">пр. Космонавтов, д.123 кв.6В, офис 422</span>
+                            </address>
+                        </li>
+                        <li class="mb-4">
+                            <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.0001 18.3337C14.6025 18.3337 18.3334 14.6027 18.3334 10.0003C18.3334 5.39795 14.6025 1.66699 10.0001 1.66699C5.39771 1.66699 1.66675 5.39795 1.66675 10.0003C1.66675 14.6027 5.39771 18.3337 10.0001 18.3337Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 5V10L12.0833 6.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                                <span class="ms-2 flex-1">Ежедневно с 09:00 до 20:00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3334 14.1004V16.6004C18.3344 16.8325 18.2868 17.0622 18.1939 17.2749C18.1009 17.4875 17.9645 17.6784 17.7935 17.8353C17.6225 17.9922 17.4206 18.1116 17.2007 18.186C16.9809 18.2603 16.7479 18.288 16.5168 18.2671C13.9525 17.9884 11.4893 17.1122 9.32511 15.7087C7.31163 14.4293 5.60455 12.7222 4.32511 10.7087C2.91676 8.53474 2.04031 6.05957 1.76677 3.48374C1.74595 3.2533 1.77334 3.02104 1.84719 2.80176C1.92105 2.58248 2.03975 2.38098 2.19575 2.21009C2.35174 2.0392 2.54161 1.90266 2.75327 1.80917C2.96492 1.71569 3.19372 1.66729 3.42511 1.66707H5.92511C6.32953 1.66309 6.7216 1.80631 7.02824 2.07002C7.33488 2.33373 7.53517 2.69995 7.59177 3.10041C7.69729 3.90046 7.89298 4.68601 8.17511 5.44207C8.28723 5.74034 8.31149 6.0645 8.24503 6.37614C8.17857 6.68778 8.02416 6.97383 7.80011 7.20041L6.74177 8.25874C7.92807 10.345 9.65549 12.0724 11.7418 13.2587L12.8001 12.2004C13.0267 11.9764 13.3127 11.8219 13.6244 11.7555C13.936 11.689 14.2602 11.7133 14.5584 11.8254C15.3145 12.1075 16.1001 12.3032 16.9001 12.4087C17.3049 12.4658 17.6746 12.6697 17.9389 12.9817C18.2032 13.2936 18.3436 13.6917 18.3334 14.1004Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.7083 1.66699C13.4068 1.84597 14.9934 2.59932 16.2056 3.80248C17.4179 5.00563 18.1832 6.5865 18.3749 8.28366" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.7083 5C12.5278 5.16161 13.2799 5.56586 13.8669 6.16026C14.4539 6.75466 14.8486 7.51177 14.9999 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                                       
+                                <a href="tel:+79121433311" class="ms-2 flex-1">+7 (912) 143-33-11</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-sm-block col-6 col-lg-3">
+                    <h3 class="mb-4">меню</h3>
+                    <ul class="list-unstyled menu">
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Цены</a></li>
+                        <li><a href="">Оплата</a></li>
+                        <li><a href="">Вопрос-ответ</a></li>
+                        <li><a href="">Полезные статьи</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5 mt-4 mt-lg-0">
+                    <form action="" class="callbackForm">
+                        <h3>нУЖНА КОНСУЛЬТАЦИЯ СВЯЖИТЕСЬ С НАМИ</h3>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis nibh. Aenean sed ipsum convallis, posuere urna vitae, bibendum mi. Lorem ipsum dolor sit amet, </p>
+                        <input type="email" class="form-control" placeholder="Email">
+                        <button type="submit" class="btn-secondary mt-3">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-0">
+                <div class="modal-body p-0">
+                    <form action="" class="callbackForm">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3 class="mb-0">СВЯЖИТЕСЬ С НАМИ</h3>
+                            <button type="button" class="btn-secondary p-1" data-bs-dismiss="modal">
+                                <svg width="1.5em" height="1.5em" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.45209 3.46967C4.74498 3.17678 5.21986 3.17678 5.51275 3.46967L21.5128 19.4697C21.8056 19.7626 21.8056 20.2374 21.5128 20.5303C21.2199 20.8232 20.745 20.8232 20.4521 20.5303L4.45209 4.53033C4.1592 4.23744 4.1592 3.76256 4.45209 3.46967Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5128 3.46967C21.8056 3.76256 21.8056 4.23744 21.5128 4.53033L5.51275 20.5303C5.21986 20.8232 4.74498 20.8232 4.45209 20.5303C4.1592 20.2374 4.1592 19.7626 4.45209 19.4697L20.4521 3.46967C20.745 3.17678 21.2199 3.17678 21.5128 3.46967Z" fill="black"/>
+                                </svg>                            
+                            </button>
+                        </div>
+                        
+                        <input type="text" class="form-control" placeholder="Ваше имя">
+                        <input type="tel" class="form-control mt-3" placeholder="Номер телефона">
+                        <label class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <div class="form-check-text">
+                                Я согласен на обработку <a href="">персональных данных</a>
+                            </div>
+                        </label>
+                        <button type="submit" class="btn-secondary mt-3">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <img class="d-lg-none logo w-50" src="imgs/logo.svg" alt="Парадис">
+            <button type="button" class="btn-primary p-1" data-bs-dismiss="offcanvas">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46967 3.46967C3.76256 3.17678 4.23744 3.17678 4.53033 3.46967L20.5303 19.4697C20.8232 19.7626 20.8232 20.2374 20.5303 20.5303C20.2374 20.8232 19.7626 20.8232 19.4697 20.5303L3.46967 4.53033C3.17678 4.23744 3.17678 3.76256 3.46967 3.46967Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5303 3.46967C20.8232 3.76256 20.8232 4.23744 20.5303 4.53033L4.53033 20.5303C4.23744 20.8232 3.76256 20.8232 3.46967 20.5303C3.17678 20.2374 3.17678 19.7626 3.46967 19.4697L19.4697 3.46967C19.7626 3.17678 20.2374 3.17678 20.5303 3.46967Z" fill="white"/>
+                </svg>                    
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <a href="">О компании</a>
+                </li>
+                <li>
+                    <div class="d-flex w-100">
+                        <a href="">Услуги</a>
+                        <button class="ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu" aria-expanded="false">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 13.172L16.95 8.222L18.364 9.636L12 16L5.63601 9.636L7.05001 8.222L12 13.172Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="collapse" id="collapseMenu">
+                        <li><a href="#">Услуги 1</a></li>
+                        <li><a href="#">Услуги 2</a></li>
+                        <li><a href="#">Услуги 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Цены</a>
+                </li>
+                <li>
+                    <a href="">Оплата</a>
+                </li>
+                <li>
+                    <a href="">Вопрос-ответ</a>
+                </li>
+                <li>
+                    <a href="">Полезные статьи</a>
+                </li>
+                <li>
+                    <a href="">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer">
+            <address class="d-flex align-items-center">
+                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6666 8.33334C16.6666 13.3333 9.99992 18.3333 9.99992 18.3333C9.99992 18.3333 3.33325 13.3333 3.33325 8.33334C3.33325 6.56523 4.03563 4.86954 5.28587 3.61929C6.53612 2.36905 8.23181 1.66667 9.99992 1.66667C11.768 1.66667 13.4637 2.36905 14.714 3.61929C15.9642 4.86954 16.6666 6.56523 16.6666 8.33334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 10.8333C11.3807 10.8333 12.5 9.71404 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71404 8.61929 10.8333 10 10.8333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <span class="ms-2 flex-1">пр. Космонавтов, д.123 кв.6В, офис 422</span>
+            </address>
+            <div class="d-flex align-items-center mt-3">
+                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6023 1.66667 9.99996 1.66667C5.39759 1.66667 1.66663 5.39763 1.66663 10C1.66663 14.6024 5.39759 18.3333 9.99996 18.3333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 5V10L12.0833 6.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <span class="ms-2 flex-1">Ежедневно с 09:00 до 20:00</span>
+            </div>
+            <a class="d-flex align-items-center mt-3 mb-2" href="tel:+79121433311">
+                <svg class="color-main" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2745C18.1008 17.4871 17.9644 17.678 17.7934 17.8349C17.6224 17.9918 17.4205 18.1112 17.2006 18.1856C16.9808 18.2599 16.7478 18.2876 16.5167 18.2667C13.9523 17.988 11.4892 17.1118 9.32498 15.7083C7.31151 14.4289 5.60443 12.7218 4.32499 10.7083C2.91663 8.53433 2.04019 6.05916 1.76665 3.48333C1.74583 3.25288 1.77321 3.02063 1.84707 2.80135C1.92092 2.58207 2.03963 2.38057 2.19562 2.20968C2.35162 2.03879 2.54149 1.90225 2.75314 1.80876C2.9648 1.71527 3.1936 1.66688 3.42499 1.66666H5.92499C6.32941 1.66268 6.72148 1.80589 7.02812 2.0696C7.33476 2.33332 7.53505 2.69953 7.59165 3.09999C7.69717 3.90005 7.89286 4.6856 8.17499 5.44166C8.2871 5.73993 8.31137 6.06409 8.24491 6.37573C8.17844 6.68737 8.02404 6.97342 7.79998 7.19999L6.74165 8.25833C7.92795 10.3446 9.65536 12.072 11.7417 13.2583L12.8 12.2C13.0266 11.9759 13.3126 11.8215 13.6243 11.7551C13.9359 11.6886 14.26 11.7129 14.5583 11.825C15.3144 12.1071 16.0999 12.3028 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6913 18.3333 14.1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7084 1.66667C13.4069 1.84565 14.9935 2.599 16.2058 3.80216C17.418 5.00531 18.1833 6.58618 18.375 8.28334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7084 5C12.528 5.16161 13.2801 5.56586 13.867 6.16026C14.454 6.75466 14.8487 7.51177 15 8.33333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                        
+                <span class="fs-17 fw-7 ms-2 flex-1">+7 (912) 143-33-11</span>
+            </a>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#callbackModal" class="color-main fw-7 text-uppercase ms-4 mt-2">Заказать звонок</button>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/fslightbox.js"></script>
+</body>
+</html>
