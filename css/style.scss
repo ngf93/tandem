@@ -36,16 +36,27 @@
     --bs-modal-border-radius: var(--radius);
     --bs-modal-border-width: 0px;
 
+    --pf-height: 600px;
+    
+    @media(max-width: 1399.98px) {
+        --pf-height: 525px;
+    }
+    @media(max-width: 1199.98px) {
+        --pf-height: 450px;
+    }
     @media (max-width: 991.98px) {
         --h-height: 113px;
         --f-height: 770px;
+        --pf-height: 380px;
     }
     @media (max-width: 767.98px) {
         --h-height: 95px;
+        --pf-height: 300px;
     }
     @media (max-width: 575.98px) {
         --h-height: 70px;
         --f-height: 700px;
+        --pf-height: 60vw;
     }
 }
 
@@ -267,6 +278,7 @@ strong {font-weight: 600;}
 .title-font {
     font-family: var(--title-font);
 }
+.op-5 {opacity: .5;}
 
 button {
     background: none;
@@ -600,10 +612,12 @@ button {
 .custom-table {
     border: 1px solid #EFEFEF;
     border-radius: var(--radius-md);
+    overflow: hidden;
+    @include safariFix();
     table {
         width: 100%;
         border: none;
-        thead, tbody {
+        tbody {
             tr {
                 background-color: transparent;
                 transition: background-color var(--transition);
@@ -611,14 +625,14 @@ button {
                     border-bottom: 1px solid #EFEFEF;
                 }
                 &:hover {
-                    background-color: #F9F9F9;
+                    background-color: #F1F7FF;
                 }
-                td, th {
+                td {
                     padding: 1em;
                     border-right: 1px solid #EFEFEF;
                     &:last-child {
                         border-right: none;
-                        width: 300px;
+                        width: 225px;
                         @media (max-width: 991.98px) {
                             width: 150px;
                         }
@@ -628,10 +642,14 @@ button {
                         button {
                             padding: .7em 1.2em;
                             border-radius: var(--radius-sm);
+                            @media (max-width: 767.98px) {
+                                font-size: .8em;
+                            }
                         }
                     }
-                    @media (max-width: 575.98px) {
-                        &:nth-child(2) {
+                    &:nth-child(2) {
+                        font-weight: 700;
+                        @media (max-width: 575.98px) {
                             display: none;
                         }
                     }
@@ -640,11 +658,13 @@ button {
         }
         thead {
             border-bottom: 1px solid #EFEFEF;
+            background-color: var(--accent-color);
             th {
-                font-family: var(--title-font);
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 1em;
-                color: #A6ACB9;
+                color: var(--bg-color);
+                padding: 1em;
+                border-right: 1px solid var(--accent-color);
             }
         }
     }
@@ -968,6 +988,9 @@ main {
 .about-img {
     border-radius: var(--radius-lg);
     @include safariFix();
+    @media (max-width: 991.98px) {
+        margin-top: 1.5em;
+    }
 }
 
 
@@ -1025,6 +1048,57 @@ main {
         }
     }
 }
+.product-card-mini {
+    position: relative;
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    @include safariFix();
+    @media(max-width: 1399.98px) {
+        height: 250px;
+    }
+    @media(max-width: 1199.98px) {
+        height: 290px;
+    }
+    @media (max-width: 575.98px) {
+        height: 80vw;
+    }
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include safariFix();
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+        p {
+            font-size: 16px;
+        }
+    }
+    &-text {
+        position: relative;
+        height: 100%;
+        z-index: 3;
+        @include flex(column, flex-start, flex-start, nowrap);
+        color: var(--bg-color);
+        padding: 1.5em;
+        @media (max-width: 991.98px) {
+            padding: 1em;
+        }
+    }
+}
 .simple-card {
     background-color: #F1F5FA;
     border-radius: var(--radius-md);
@@ -1062,65 +1136,7 @@ main {
 
 
 .swiper-portfolio {
-    --height: 600px;
     position: relative;
-    @media(max-width: 1399.98px) {
-        --height: 525px;
-    }
-    @media(max-width: 1199.98px) {
-        --height: 450px;
-    }
-    @media(max-width: 991.98px) {
-        --height: 380px;
-    }
-    @media(max-width: 776.98px) {
-        --height: 300px;
-    }
-    @media(max-width: 575.98px) {
-        --height: 60vw;
-    }
-    .ba-group {
-        @include flex(row, center, stretch, nowrap);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        @include safariFix();
-        margin-bottom: 2em;
-        position: relative;
-        img {
-            width: 50%;
-            height: var(--height);
-            object-fit: cover;
-            position: relative;
-            z-index: 1;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: 2;
-            top: 0px;
-            left: 50%;
-            height: 100%;
-            width: calc(var(--radius-md)/2);
-            background-color: var(--bg-color);
-            transform: translateX(-50%);
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 50%;
-            height: calc(var(--radius-md)*2.5);
-            width: var(--radius-md);
-            background-color: var(--bg-color);
-            background-image: url(../imgs/icons/crossbar.svg);
-            background-repeat: no-repeat;
-            background-size: 50% auto;
-            background-position: 50% 50%;
-            border-radius: calc(var(--radius-sm)/2);
-            transform: translateX(-50%);
-        }
-    }
     .swiper-controls {
         position: absolute;
         top: calc(var(--height) + 2em);
@@ -1132,41 +1148,75 @@ main {
         }
     }
 }
+.ba-group {
+    @include flex(row, center, stretch, nowrap);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    @include safariFix();
+    margin-bottom: 2em;
+    position: relative;
+    @media (max-width:575px) {
+        margin-bottom: 1em;
+    }
+    img {
+        width: 50%;
+        height: var(--pf-height);
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        left: 50%;
+        height: 100%;
+        width: calc(var(--radius-md)/2);
+        background-color: var(--bg-color);
+        transform: translateX(-50%);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        height: calc(var(--radius-md)*2.5);
+        width: var(--radius-md);
+        background-color: var(--bg-color);
+        background-image: url(../imgs/icons/crossbar.svg);
+        background-repeat: no-repeat;
+        background-size: 50% auto;
+        background-position: 50% 50%;
+        border-radius: calc(var(--radius-sm)/2);
+        transform: translateX(-50%);
+    }
+}
+.pf-item {
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        @media (max-width:1399px) {
+            height: 275px;
+        }
+        @media (max-width:1199px) {
+            height: 225px;
+        }
+        @media (max-width:991px) {
+            height: 200px;
+        }
+        @media (max-width:767px) {
+            height: 250px;
+        }
+        @media (max-width:575px) {
+            height: 40vw;
+        }
+    }
+}
 
-
-// .docs-list {
-//     @include list();
-//     li {
-//         border-bottom: 1px solid var(--light-gray);
-//         padding: 1.2em 0em 1.4em;
-//         display: grid;
-//         grid-template-columns: auto 120px;
-//         grid-template-rows: auto auto;
-//         grid-template-areas: "title btn"
-//         "weight btn";
-//         @media (max-width: 575.98px) {
-//             grid-template-columns: 120px auto;
-//             grid-template-areas: "title title"
-//             "btn weight";
-//         }
-//         h6 {
-//             grid-area: title;
-//         }
-//         p {
-//             grid-area: weight;
-//             opacity: 0.7;
-//             font-size: 1.1em;
-//             font-weight: 600;
-//             text-transform: uppercase;
-//             @media (max-width: 575.98px) {
-//                 @include flex(row, flex-start, center, nowrap);
-//             }
-//         }
-//         .btn-fill {
-//             grid-area: btn;
-//         }
-//     }
-// }
 
 .imgCap {
     position: relative;
@@ -1265,91 +1315,33 @@ main {
     }
 }
 
-// .cart {
-//     @include list();
-//     &-item {
-//         background-color: #F4F4F4;
-//         border-radius: var(--radius);
-//         @include flex(row, flex-start, stretch, nowrap);
-//         padding: 1.4em;
-//         &:not(:first-child){
-//             margin-top: 1.2em;
-//         }
-//         @media (max-width:575.98px) {
-//             flex-direction: column;
-//         }
 
-//         &-img {
-//             width: 163px;
-//             height: 163px;
-//             border-radius: var(--radius);
-//             @media (max-width:1199.98px) {
-//                 width: 120px;
-//                 height: 120px;
-//             }
-//             @media (max-width:575.98px) {
-//                 width: 100%;
-//                 height: 75vw;
-//                 margin-bottom: 1em;
-//             }
-//         }
-//         hr {
-//             height: auto;
-//             width: 1px;
-//             background-color: rgba(0, 0, 0, 0.2);
-//             margin: 0em 3em 0em 0.7em;
-//             opacity: 1;
-//             @media (max-width:1199.98px) {
-//                 margin: 0em 0.7em;
-//             }
-//             @media (max-width:575.98px) {
-//                 display: none;
-//             }
-//         }
-//         &-text {
-//             flex: 1;
-//             @include flex(column, space-between, stretch, nowrap);
-//         }
-//         &-count {
-//             @include flex();
-//             input {
-//                 appearance: none;
-//                 -moz-appearance: textfield;
-//                 border: 1px solid var(--font-color);
-//                 padding: 0em;
-//                 width: 34px;
-//                 height: 34px;
-//                 background-color: transparent;
-//                 border-radius: 0px;
-//                 text-align: center;
-//                 margin: 0px 1.4em;
-//                 &::-webkit-outer-spin-button,
-//                 &::-webkit-inner-spin-button {
-//                     -webkit-appearance: none;
-//                     margin: 0;
-//                 }
-//                 @media (max-width:575.98px) {
-//                     margin: 0px .7em;
-//                 }
-//             }
-//             button {
-//                 width: 34px;
-//                 height: 34px;
-//                 @include flex();
-//                 background-color: transparent;
-//                 transition: background-color var(--transition);
-//                 &:hover, &:focus, &:active {
-//                     background-color: #ededed;
-//                 }
-//             }
-//         }
-//     }
-//     &-summ {
-//         border: 1px solid var(--font-color);
-//         border-radius: var(--radius);
-//         padding: 1.8em 2em;
-//     }
-// }
+article {
+    img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        margin-bottom: 1em;
+        @media (max-width: 1399.98px) {
+            height: 340px;
+        }
+        @media (max-width: 1199.98px) {
+            height: 300px;
+        }
+        @media (max-width: 767.98px) {
+            height: 250px;
+        }
+        @media (max-width: 575.98px) {
+            height: 85vw;
+        }
+    }
+    p {
+        font-size: 1.15em;
+        margin-bottom: 1em;
+    }
+}
+
 
 footer {
     background-color: #02183A;
