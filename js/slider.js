@@ -53,6 +53,10 @@ const swiper2 = new Swiper('.swiper-3elems', {
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
     },
   }
 });
